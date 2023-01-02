@@ -1,3 +1,5 @@
+#pragma once
+
 #include "state.hpp"
 
 class Phone{

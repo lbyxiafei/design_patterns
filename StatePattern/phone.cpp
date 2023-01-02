@@ -1,10 +1,11 @@
 #include "state.hpp"
+#include "phone.hpp"
 
-class Phone{
-public:
-    void pressHomeButton();
-    void pressPowerButton();
-private:
-    friend class State;
-    void changeState(State&);
-};
+void Phone::pressHomeButton(){
+}
+
+void Phone::pressPowerButton(){
+}
+
+void Phone::changeState(State& state){
+}
