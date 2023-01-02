@@ -10,6 +10,8 @@ State& State::getInstance() {
    return state;
 }
 
-void State::test(){
-    cout << '?' << endl;
+void State::handleHomePressed(){
+}
+
+void State::handlePowerPressed(){
 }
