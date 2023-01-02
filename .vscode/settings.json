@@ -1,0 +1,23 @@
+{
+  "C_Cpp.dimInactiveRegions": false,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, ColumnLimit: 0}",
+  "editor.formatOnSave": false,
+  "editor.tabSize": 4,
+  "editor.quickSuggestions": { "other": false, "comments": false, "strings": false },
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.quickSuggestionsDelay": 10,
+  "editor.wordBasedSuggestions": false,
+  "editor.detectIndentation": false,
+  "files.associations": {
+    "array": "cpp",
+    "fstream": "cpp",
+    "future": "cpp",
+    "optional": "cpp",
+    "shared_mutex": "cpp",
+    "sstream": "cpp",
+    "thread": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "ostream": "cpp"
+}
+}
