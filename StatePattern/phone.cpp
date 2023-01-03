@@ -1,5 +1,8 @@
-#include "state.hpp"
 #include "phone.hpp"
+#include "state.hpp"
+#include "off_state.hpp"
+#include "locked_state.hpp"
+#include "ready_state.hpp"
 
 Phone::Phone(){
     _state = std::make_shared<OffState>();

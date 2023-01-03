@@ -12,6 +12,9 @@ int main(){
     cout << &phone << endl;
 
     phone.pressHomeButton();
+    phone.pressPowerButton();
+    phone.pressHomeButton();
+    phone.pressHomeButton();
 
     return 0;
 }
