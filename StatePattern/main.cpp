@@ -5,9 +5,6 @@
 using namespace std;
 
 int main(){
-    State& st=State::getInstance();
-    cout << &st << endl;
-
     Phone phone;
     cout << &phone << endl;
 

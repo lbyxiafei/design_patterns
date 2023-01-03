@@ -2,7 +2,7 @@
 #include "phone.hpp"
 
 Phone::Phone(){
-    _state = std::shared_ptr<State>(&State::getInstance());
+    _state = std::make_shared<State>(State::getInstance());
 }
 
 Phone::~Phone(){}
