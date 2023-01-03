@@ -1,10 +1,11 @@
 #pragma once
 
+#include "phone.hpp"
+
+class Phone;
+
 class State{
-private:
-    State();
 public:
-    static State& getInstance();
-    virtual void handleHomePressed();
-    virtual void handlePowerPressed();
+    virtual void handleHomePressed(Phone&);
+    virtual void handlePowerPressed(Phone&);
 };

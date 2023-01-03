@@ -1,12 +1,17 @@
 #include <bits/stdc++.h>
-#include "state.hpp"
 #include "phone.hpp"
+#include "state.hpp"
+#include "off_state.hpp"
+#include "locked_state.hpp"
+#include "ready_state.hpp"
 
 using namespace std;
 
 int main(){
     Phone phone;
     cout << &phone << endl;
+
+    phone.pressHomeButton();
 
     return 0;
 }

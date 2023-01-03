@@ -2,17 +2,17 @@
 #include "phone.hpp"
 
 Phone::Phone(){
-    _state = std::make_shared<State>(State::getInstance());
+    _state = std::make_shared<OffState>();
 }
 
 Phone::~Phone(){}
 
 void Phone::pressHomeButton(){
-    _state->handleHomePressed();
+    _state->handleHomePressed(*this);
 }
 
 void Phone::pressPowerButton(){
-    _state->handlePowerPressed();
+    _state->handlePowerPressed(*this);
 }
 
 void Phone::changeState(std::shared_ptr<State> state){

@@ -1,17 +1,10 @@
 #include <bits/stdc++.h>
 #include "state.hpp"
 
-State::State()=default;
-
-State& State::getInstance() {
-   static State state;
-   return state;
-}
-
-void State::handleHomePressed(){
+void State::handleHomePressed(Phone& phone){
     std::cout << "handle home pressed" << '\n';
 }
 
-void State::handlePowerPressed(){
+void State::handlePowerPressed(Phone& phone){
     std::cout << "handle power pressed" << '\n';
 }
