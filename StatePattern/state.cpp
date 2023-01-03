@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
 #include "state.hpp"
 
-
 State::State()=default;
 
-std::unique_ptr<State> State::getInstance() {
-   static unique_ptr<State> state;
+State& State::getInstance() {
+   static State state;
    return state;
 }
 

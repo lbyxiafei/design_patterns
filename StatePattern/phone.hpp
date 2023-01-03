@@ -8,10 +8,11 @@ class State;
 class Phone{
 public:
     Phone();
+    ~Phone();
     void pressHomeButton();
     void pressPowerButton();
 private:
     friend class State;
-    std::unique_ptr<State> _state;
-    void changeState(std::unique_ptr<State>);
+    std::shared_ptr<State> _state;
+    void changeState(std::shared_ptr<State>);
 };

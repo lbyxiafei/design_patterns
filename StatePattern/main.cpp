@@ -9,6 +9,7 @@ int main(){
     cout << &st << endl;
 
     Phone phone;
+    cout << &phone << endl;
 
     return 0;
 }

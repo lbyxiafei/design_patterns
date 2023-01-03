@@ -2,8 +2,10 @@
 #include "phone.hpp"
 
 Phone::Phone(){
-    _state = State::getInstance();
+    _state = std::shared_ptr<State>(&State::getInstance());
 }
+
+Phone::~Phone(){}
 
 void Phone::pressHomeButton(){
     _state->handleHomePressed();
@@ -13,6 +15,6 @@ void Phone::pressPowerButton(){
     _state->handlePowerPressed();
 }
 
-void Phone::changeState(unique_ptr<State> state){
+void Phone::changeState(std::shared_ptr<State> state){
     _state = state;
 }
