@@ -1,12 +1,26 @@
 #include <bits/stdc++.h>
 
 #include "singleton.hpp"
+#include "singleton_ptr.hpp"
 
 using namespace std;
 
 int main(){
     cout << "hello" << endl;
+    auto pptr = SingletonPtr::getInstance();
+    cout << pptr->getCnt() << endl;
+    pptr->setCnt(5);
+    cout << pptr->getCnt() << endl;
 
+    auto pptr2 = SingletonPtr::getInstance();
+    cout << pptr2->getCnt() << endl;
+    pptr2->setCnt(555);
+    cout << pptr2->getCnt() << endl;
+
+
+
+    cout << "hello" << endl;
+    // instance version
     auto ptr = make_shared<Singleton>(Singleton::getInstance());
     cout << ptr->getCnt() << endl;
     ptr->setCnt(5);
