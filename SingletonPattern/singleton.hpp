@@ -4,12 +4,11 @@
 
 class Singleton{
 private:
-    int _cnt;
+    static int _cnt;
     Singleton();
 public:
+    ~Singleton();
     static Singleton& getInstance();
-
     void setCnt(int x);
-
     int getCnt();
 };

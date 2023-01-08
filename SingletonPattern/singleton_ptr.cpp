@@ -2,9 +2,9 @@
 
 #include "singleton_ptr.hpp"
 
-SingletonPtr::SingletonPtr() {
-    _cnt = 0;
-}
+SingletonPtr::SingletonPtr() : _cnt(0) {}
+
+SingletonPtr::~SingletonPtr() = default;
 
 std::shared_ptr<SingletonPtr> SingletonPtr::getInstance() {
     static std::shared_ptr<SingletonPtr> instance(new SingletonPtr);

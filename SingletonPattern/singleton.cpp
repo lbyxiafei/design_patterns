@@ -3,6 +3,10 @@
 
 Singleton::Singleton() = default;
 
+Singleton::~Singleton() = default;
+
+int Singleton::_cnt= 0;
+
 Singleton& Singleton::getInstance() {
     static Singleton instance;
     return instance;
