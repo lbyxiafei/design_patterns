@@ -5,10 +5,11 @@
 class SingletonPtr{
 private:
     int _cnt;
+protected:
     SingletonPtr();
 public:
     ~SingletonPtr();
     static std::shared_ptr<SingletonPtr> getInstance();
-    void setCnt(int x);
-    int getCnt();
+    virtual void setCnt(int x);
+    virtual int getCnt();
 };

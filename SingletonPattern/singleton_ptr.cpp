@@ -4,7 +4,9 @@
 
 SingletonPtr::SingletonPtr() : _cnt(0) {}
 
-SingletonPtr::~SingletonPtr() = default;
+SingletonPtr::~SingletonPtr() {
+    std::cout << "SingletonPtr: " << _cnt << " destroyed.\n";
+}
 
 std::shared_ptr<SingletonPtr> SingletonPtr::getInstance() {
     static std::shared_ptr<SingletonPtr> instance(new SingletonPtr);
