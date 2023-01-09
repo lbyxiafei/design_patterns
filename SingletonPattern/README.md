@@ -26,3 +26,5 @@ cout << ptr->getCnt() << ',' << ptr2->getCnt() << endl;
 ```
 
 ## Conclusion
+
+singleton的static/non-static的影响，指针与非指针instance写法，以及多态singleton，结合c++这门语言，充满了很多值得去深究细节，
