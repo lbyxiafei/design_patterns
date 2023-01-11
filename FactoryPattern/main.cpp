@@ -8,11 +8,10 @@
 #include "JavaCourse.hpp"
 #include "CppCourse.hpp"
 
-using namespace std;
-
 int main(){
-    cout << "hello" << endl;
-    AbstractCourseFactory onlineFactory;
+    std::cout << "hello" << std::endl;
+    std::shared_ptr<AbstractCourseFactory> onlineFactory = std::make_shared<OnlineCourseFactory>();
+    AbstractCourseFactory *tes = new OnlineCourseFactory();
 
     return 0;
 }

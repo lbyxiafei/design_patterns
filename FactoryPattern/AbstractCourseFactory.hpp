@@ -4,12 +4,11 @@
 
 #include "Course.hpp"
 
-class Course;
-
 class AbstractCourseFactory{
 private:
 protected:
-    virtual Course& initializeCourse();
+    virtual std::unique_ptr<Course> initializeCourse(std::string type) = 0;
 public:
-    Course& createCourse();
+    AbstractCourseFactory();
+    std::unique_ptr<Course> createCourse(std::string type);
 };

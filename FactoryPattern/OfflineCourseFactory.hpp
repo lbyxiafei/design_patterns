@@ -5,11 +5,9 @@
 #include "AbstractCourseFactory.hpp"
 #include "Course.hpp"
 
-class Course;
-
-class OfflineJavaCourseFactory : public AbstractCourseFactory{
+class OfflineCourseFactory : public AbstractCourseFactory{
 private:
 protected:
-    Course& initializeCourse() override;
+    std::unique_ptr<Course> initializeCourse(std::string type) override;
 public:
 };
