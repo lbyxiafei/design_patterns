@@ -8,6 +8,7 @@ class CppCourse : public Course {
 private:
     std::string _course;
 public:
+    CppCourse();
     CppCourse(std::string course);
     std::string getCourseInfo() override;
     void createCourseMaterial() override;

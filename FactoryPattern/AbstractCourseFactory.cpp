@@ -7,5 +7,8 @@
 AbstractCourseFactory::AbstractCourseFactory() = default;
 
 std::unique_ptr<Course> AbstractCourseFactory::createCourse(std::string type) {
-    return initializeCourse(type);
+    std::unique_ptr<Course> course = initializeCourse(type);
+    course->createCourseMaterial();
+    course->createCourseSchedule();
+    return course;
 }
