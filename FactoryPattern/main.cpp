@@ -10,8 +10,13 @@
 
 int main(){
     std::cout << "hello" << std::endl;
+
     std::shared_ptr<AbstractCourseFactory> onlineFactory = std::make_shared<OnlineCourseFactory>();
+    std::cout << onlineFactory->createCourse("hi")->getCourseInfo() << std::endl;
+
     AbstractCourseFactory *tes = new OnlineCourseFactory();
+    auto c = tes->createCourse("yo");
+    std::cout << c->getCourseInfo() << std::endl;
 
     return 0;
 }
