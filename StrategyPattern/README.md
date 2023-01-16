@@ -24,3 +24,5 @@ Also known as `Policy`
 整体来看，strategy pattern的宗旨就是以`composition + polymorphism`的形式取代`if-else-statements`。
 
 > 关于`if-else-statements`多说一句自己的理解：从design角度看，应该尽量将if/else安排在上层，即`if/else stays top`
+
+P.S. [一篇关于if-else best practice的文章](https://medium.com/@balsikandar/best-practices-for-writing-if-else-7e89dd503754)
