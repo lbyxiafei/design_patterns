@@ -17,7 +17,7 @@ public:
 private:
     friend class State; 
     friend class OffState; 
-    friend class LockedState; 
+    friend class LockedState;
     friend class ReadyState;
     std::shared_ptr<State> _state;
     void changeState(std::shared_ptr<State>);
