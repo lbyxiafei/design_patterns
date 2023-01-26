@@ -5,9 +5,10 @@
 class Stream{
 public:
     Stream();
-    void putInt();
-    void putString();
-    virtual void handleBufferFull();
-private:
-    std::string _buffer;
+    ~Stream();
+    virtual void putString(std::string);
+    virtual void handleBufferFull()=0;
+protected:
+    std::string buffer_;
+    int capacity_;
 };
