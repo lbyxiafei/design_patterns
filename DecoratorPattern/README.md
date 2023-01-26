@@ -6,9 +6,13 @@ Also known as `Wrapper`
 
 Stream/流: provides an interface for converting objects into a sequence of bytes or characters.
 
-
-
 ## Structure
+
+> Stream
+>> File/MemoryStream
+>>> EncodedStreamDecorator
+>>>> CompressedStreamDecorator
+>>>>> ...
 
 ## Comparison
 
@@ -18,3 +22,4 @@ Stream/流: provides an interface for converting objects into a sequence of byte
 
 ## Conclusion
 
+Decorator的优势和特点很明显：可以层层嵌套使用；劣势在于：必须在decorator内复写每一个每一个装饰对象的functions。
