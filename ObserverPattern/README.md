@@ -8,11 +8,13 @@ Also known as `Dependents`, `Publish-Subscribe`.
 // push model
 
 // subject:
-for(auto observer : observers)
-    observer->Update(details) // push
+void Subject::Notify(){
+    for(auto observer : observers)
+        observer->Update(details); // push
+}
 
 // observer:
-void Update(details){
+void Observer::Update(details){
 }
 ```
 
@@ -20,12 +22,14 @@ void Update(details){
 // pull model
 
 // subject:
-for(auto observer : observers_)
-    observer->Update(details);
+void Subject::Notify(){
+    for(auto observer : observers_)
+        observer->Update(this);
+}
 
 // observer:
-void Update(){
-    subject_->getState(); // pull
+void Update(Subject*){
+    subject->getState(); // pull
 }
 ```
 
