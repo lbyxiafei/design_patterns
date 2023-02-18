@@ -6,18 +6,18 @@ Subject::Subject() = default;
 
 Subject::~Subject() = default;
 
-void Subject::Attach(std::shared_ptr<Observer> obs){
+void Subject::Attach(Observer* obs){
     observers_.insert(obs);
 }
 
-void Subject::Detach(std::shared_ptr<Observer> obs){
+void Subject::Detach(Observer* obs){
     if(observers_.find(obs)!=observers_.end()){
         observers_.erase(obs);
     }
 }
 
 void Subject::Notify(){
-    for(auto obs:observers_){
-        obs->Update(std::shared_ptr<Subject>(this));
+    for(auto ob:observers_){
+        ob->Update(this);
     }
 }

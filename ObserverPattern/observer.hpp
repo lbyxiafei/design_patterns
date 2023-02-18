@@ -10,5 +10,5 @@ class Observer{
 public:
     Observer();
     ~Observer();
-    virtual void Update(std::shared_ptr<Subject>) = 0;
+    virtual void Update(Subject*) = 0;
 };
