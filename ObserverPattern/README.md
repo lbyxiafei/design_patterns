@@ -35,8 +35,25 @@ void Update(Subject*){
 
 ## Use Case
 
-## Structure
+经典`MVC`
 
-## Comparison
+`pub-sub`
 
-## Conclusion
+## Combo 
+
+`Mediator Pattern`对于observer pattern是很重要的辅助：
+
+```cpp
+class Mediator{
+    Register(sub,ob);
+    UnRegister(sub,ob);
+    Notify();
+}
+```
+
+Mediator在这里扮演了一个subject/observer中间调解人的角色
+
+> 值得注意的是，在完整的work flow中，有一个此处未提及但很重要的component：`producer`，进而observer就是comsumer，mediator进行subject和comsumer的管理
+
+> 那么问题来了，producer和subject的互动是怎样被管理的呢？也是mediator吗？
+
